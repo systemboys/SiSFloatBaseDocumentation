@@ -82,6 +82,14 @@
             color: #fff;
         }
         /* Content container */
+        .content-center {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            min-height: calc(100vh - var(--menu-height) - var(--footer-height));
+            box-sizing: border-box;
+        }
         .container {
             background: var(--card-bg);
             box-shadow: var(--shadow);
@@ -184,6 +192,9 @@
                 gap: 1rem;
                 font-size: 0.98rem;
             }
+            .content-center {
+                align-items: stretch;
+            }
         }
         /* Ensure body content doesn't go under fixed bars */
         body {
@@ -207,19 +218,21 @@
         </div>
     </nav>
     <!-- Main Content -->
-    <div class="container">
-        <h1>Documentação do <span style="color:var(--accent)">SiS Float Base</span></h1>
-        <p>
-            Bem-vindo à documentação oficial do <strong>SiS Float Base</strong>.<br>
-            Aqui você encontra guias, exemplos, referências de API e instruções para desenvolvedores e usuários.<br>
-            Explore os recursos abaixo para começar:
-        </p>
-        <div class="button-group">
-            <a href="README.md" class="btn">Introdução</a>
-            <a href="#" class="btn">Guia do Usuário</a>
-            <a href="#" class="btn">API Reference</a>
-            <a href="#" class="btn">Exemplos</a>
-            <a href="#" class="btn">Contato</a>
+    <div class="content-center">
+        <div class="container">
+            <h1>Documentação do <span style="color:var(--accent)">SiS Float Base</span></h1>
+            <p>
+                Bem-vindo à documentação oficial do <strong>SiS Float Base</strong>.<br>
+                Aqui você encontra guias, exemplos, referências de API e instruções para desenvolvedores e usuários.<br>
+                Explore os recursos abaixo para começar:
+            </p>
+            <div class="button-group">
+                <a href="#" class="btn">Introdução</a>
+                <a href="#" class="btn">Guia do Usuário</a>
+                <a href="#" class="btn">API Reference</a>
+                <a href="#" class="btn">Exemplos</a>
+                <a href="#" class="btn">Contato</a>
+            </div>
         </div>
     </div>
     <!-- Footer -->
