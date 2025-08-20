@@ -5,11 +5,126 @@
     <title>Documentação do SiS Float Base</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #00b4d8;
+            --secondary: #1a1a2e;
+            --background: #181824;
+            --card-bg: #23243a;
+            --text: #f1f1f1;
+            --muted: #b0b0b0;
+            --accent: #3a86ff;
+            --button-bg: linear-gradient(90deg, #00b4d8 0%, #3a86ff 100%);
+            --button-hover: linear-gradient(90deg, #3a86ff 0%, #00b4d8 100%);
+            --border-radius: 12px;
+            --shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            min-height: 100vh;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 0;
+        }
+        .container {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem 2rem 2rem;
+            margin-top: 4rem;
+            max-width: 540px;
+            width: 95%;
+            text-align: center;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            margin-bottom: 2.2rem;
+            line-height: 1.7;
+        }
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: var(--button-bg);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.85rem 2.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px 0 rgba(0,180,216,0.10);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+            outline: none;
+            letter-spacing: 0.5px;
+        }
+        .btn:hover, .btn:focus {
+            background: var(--button-hover);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 4px 16px 0 rgba(58,134,255,0.15);
+        }
+        .footer {
+            margin-top: 3rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+            text-align: center;
+            opacity: 0.7;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+                margin-top: 2rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Documentação do SiS Float Base</h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa erat at dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
-    </p>
+    <div class="container">
+        <h1>Documentação do <span style="color:var(--accent)">SiS Float Base</span></h1>
+        <p>
+            Bem-vindo à documentação oficial do <strong>SiS Float Base</strong>.<br>
+            Aqui você encontra guias, exemplos, referências de API e instruções para desenvolvedores e usuários.<br>
+            Explore os recursos abaixo para começar:
+        </p>
+        <div class="button-group">
+            <a href="README.md" class="btn">Introdução</a>
+            <a href="#" class="btn">Guia do Usuário</a>
+            <a href="#" class="btn">API Reference</a>
+            <a href="#" class="btn">Exemplos</a>
+            <a href="#" class="btn">Contato</a>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 SiS Float Base &mdash; Todos os direitos reservados.
+    </div>
 </body>
 </html>
